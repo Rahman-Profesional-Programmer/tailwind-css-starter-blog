@@ -5,5 +5,14 @@ import Main from './Main'
 export default async function Page() {
   const sortedPosts = sortPosts(allBlogs)
   const posts = allCoreContent(sortedPosts)
-  return <Main posts={posts} />
+  // const envVar = process.env.NEXT_PUBLIC_TEST_VAR
+  return (
+    <>
+      {/* <div style={{ padding: '1rem', background: '#f5f5f5' }}>
+        <strong>ENV TEST:</strong> {envVar}
+      </div> */}
+
+      <Main posts={posts} />
+    </>
+  )
 }

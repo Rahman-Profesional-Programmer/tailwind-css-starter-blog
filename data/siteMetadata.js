@@ -1,15 +1,18 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Next.js Starter Blog',
-  author: 'Tails Azimuth',
-  headerTitle: 'TailwindBlog',
+  title: 'Perpustakaan Ide',
+  author: 'Noor Rahmansyah',
+  headerTitle: 'Perpustakaan Ide',
   description: 'Awal Pembelajaran Next.js and Tailwind.css oleh Naruto masa Depan',
   language: 'en-us',
+
   theme: 'system', // system, dark or light
   siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
   siteRepo: 'https://github.com/timlrx/tailwind-nextjs-starter-blog',
-  siteLogo: `${process.env.BASE_PATH || ''}/static/images/logo.png`,
+
+  siteLogo: `${process.env.BASE_PATH || ''}/static/images/logo_2.png`,
   socialBanner: `${process.env.BASE_PATH || ''}/static/images/twitter-card.png`,
+
   mastodon: 'https://mastodon.social/@mastodonuser',
   email: 'address@yoursite.com',
   github: 'https://github.com',
