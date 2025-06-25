@@ -17,6 +17,7 @@ export default async function Page() {
   const user = users && users.length > 0 ? users[0] : null
 
   // console.log('User data:', author)
+  console.log(process.env.NEXT_PUBLIC_SUPABASE_URL)
 
   const mappedUser = {
     name: user.full_name,
