@@ -78,7 +78,12 @@ module.exports = () => {
           protocol: 'https',
           hostname: 'picsum.photos',
         },
+        {
+          protocol: 'https',
+          hostname: 'ik.imagekit.io',
+        },
       ],
+      domains: ['ik.imagekit.io'], // tambahkan ini juga
       unoptimized,
     },
     async headers() {
