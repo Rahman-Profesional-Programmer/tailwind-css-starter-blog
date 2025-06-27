@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-// import { Authors, allAuthors } from 'contentlayer/generated'
+import { Authors, allAuthors } from 'contentlayer/generated'
 
 import AuthorLayout from '@/layouts/AuthorLayout'
 // import { coreContent } from 'pliny/utils/contentlayer'
@@ -26,7 +26,7 @@ export default function Page() {
     x?: string
     linkedin?: string
     github?: string
-    type?: string | null
+    type?: 'Authors' | null
     description?: string
     path?: string | null
     slug?: string | null
