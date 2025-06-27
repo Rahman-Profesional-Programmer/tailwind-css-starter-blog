@@ -3,15 +3,53 @@ import type { Authors } from 'contentlayer/generated'
 import SocialIcon from '@/components/social-icons'
 import Image from '@/components/Image'
 
+// interface Props {
+//   children: ReactNode
+//   content: Omit<Authors, '_id' | '_raw' | 'body'>
+// }
+
+interface UserProfile {
+  name: string
+  avatar?: string
+  occupation?: string
+  company?: string
+  email: string
+  twitter?: string | undefined
+  linkedin?: string | undefined
+  github?: string | undefined
+  type?: string | null
+  bluesky?: string | undefined
+  description?: string | undefined
+  path?: string | null
+  slug?: string | null
+  readingTime?: string | null
+  filePath?: string | null
+  toc?: {
+    value: string
+    url: string
+    depth: number
+  }[]
+}
+
 interface Props {
-  children: ReactNode
-  content: Omit<Authors, '_id' | '_raw' | 'body'>
+  children: React.ReactNode
+  content: UserProfile
 }
 
 export default function AuthorLayout({ children, content }: Props) {
   // console.log(content)
 
-  const { name, avatar, occupation, company, email, twitter, bluesky, linkedin, github } = content
+  const {
+    name,
+    avatar,
+    occupation = '',
+    company = '',
+    email,
+    twitter,
+    bluesky,
+    linkedin,
+    github,
+  } = content
 
   // console.log('Avatar:', avatar)
 

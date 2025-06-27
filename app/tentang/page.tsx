@@ -19,14 +19,14 @@ export default function Page() {
 
   interface User {
     full_name: string
-    avatar: string
-    occupation: string
-    company: string
+    avatar?: string
+    occupation?: string
+    company?: string
     email: string
     x?: string
     linkedin?: string
     github?: string
-    type?: 'Authors' | null
+    type?: string | null
     description?: string
     path?: string | null
     slug?: string | null
@@ -55,30 +55,28 @@ export default function Page() {
 
   const mappedUser = {
     name: user.full_name,
-    avatar: user.avatar,
-    occupation: user.occupation,
-    company: user.company,
-
+    avatar: user.avatar || '',
+    occupation: user.occupation || '',
+    company: user.company || '',
     email: user.email,
     twitter: user.x,
     linkedin: user.linkedin,
     github: user.github,
-    type: 'Authors', // 👈 ini wajib literal
+    type: user.type,
     bluesky: '',
-
-    description: user.description,
-
-    path: user.path ?? null,
-    slug: user.slug ?? null,
-
-    readingTime: user.readingTime ?? null,
-    filePath: user.filePath ?? null,
-    toc: user.toc ?? null,
+    description: user.description || '',
+    path: user.path,
+    slug: user.slug,
+    readingTime: user.readingTime,
+    filePath: user.filePath,
+    toc: user.toc,
   }
 
   return (
     <AuthorLayout content={mappedUser}>
-      <div className="whitespace-pre-line text-gray-700">{mappedUser.description}</div>
+      <div className="whitespace-pre-line text-gray-700 dark:text-gray-300">
+        {mappedUser.description}
+      </div>
     </AuthorLayout>
   )
 }
