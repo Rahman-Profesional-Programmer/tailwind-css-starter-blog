@@ -5,15 +5,13 @@ import clsx from 'clsx'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
-export function NavItem({
-  href,
-  label,
-  children,
-}: {
-  href: string
+interface NavItemProps {
+  href?: string
   label: string
   children: React.ReactNode
-}) {
+}
+
+export function NavItem({ href = '#', label, children }: NavItemProps) {
   const pathname = usePathname()
 
   return (
