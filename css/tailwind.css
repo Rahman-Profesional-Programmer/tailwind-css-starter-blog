@@ -37,6 +37,20 @@
   --color-gray-900: oklch(0.21 0.034 264.665);
   --color-gray-950: oklch(0.13 0.028 261.692);
 
+  --color-background: oklch(1 0 0);
+  --color-foreground: oklch(0.206 0.034 264.6);
+  --color-card: oklch(1 0 0);
+  --color-card-foreground: oklch(0.206 0.034 264.6);
+  --color-popover: oklch(1 0 0);
+  --color-popover-foreground: oklch(0.206 0.034 264.6);
+  --color-muted: oklch(0.967 0.003 264.5);
+  --color-muted-foreground: oklch(0.551 0.027 264.364);
+  --color-accent: oklch(0.967 0.003 264.5);
+  --color-accent-foreground: oklch(0.206 0.034 264.6);
+  --color-border: oklch(0.928 0.006 264.531);
+  --color-input: oklch(0.928 0.006 264.531);
+  --color-ring: oklch(0.206 0.034 264.6);
+
   /* Line heights */
   --line-height-11: 2.75rem;
   --line-height-12: 3rem;
@@ -48,6 +62,22 @@
   --z-70: 70;
   --z-80: 80;
 }
+
+/* @theme dark {
+  --color-background: oklch(0.13 0.028 261.692);
+  --color-foreground: oklch(0.967 0.003 264.5);
+  --color-card: oklch(0.206 0.034 264.6);
+  --color-card-foreground: oklch(0.967 0.003 264.5);
+  --color-popover: oklch(0.206 0.034 264.6);
+  --color-popover-foreground: oklch(0.967 0.003 264.5);
+  --color-muted: oklch(0.278 0.033 256.848);
+  --color-muted-foreground: oklch(0.707 0.022 261.325);
+  --color-accent: oklch(0.278 0.033 256.848);
+  --color-accent-foreground: oklch(0.967 0.003 264.5);
+  --color-border: oklch(0.278 0.033 256.848);
+  --color-input: oklch(0.278 0.033 256.848);
+  --color-ring: oklch(0.872 0.01 258.338);
+} */
 
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,

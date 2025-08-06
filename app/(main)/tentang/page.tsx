@@ -5,7 +5,7 @@ import { Authors, allAuthors } from 'contentlayer/generated'
 
 import AuthorLayout from '@/layouts/AuthorLayout'
 // import { coreContent } from 'pliny/utils/contentlayer'
-import { createSupabaseClient } from '../../lib/supabaseClient'
+import { createSupabaseClient } from '@/lib/supabaseClient'
 
 export default function Page() {
   // const author = allAuthors.find((p) => p.slug === 'default') as Authors
