@@ -103,7 +103,7 @@ const nextConfig = () => {
       })
 
       // Tambahkan alias @ ke root project
-      config.resolve.alias['@'] = path.resolve(__dirname)
+      config.resolve.alias['@'] = process.cwd()
 
       return config
     },
