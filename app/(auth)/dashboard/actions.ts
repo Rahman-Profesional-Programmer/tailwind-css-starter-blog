@@ -7,22 +7,17 @@ import { revalidatePath } from 'next/cache'
 export async function deleteArticle(formData: FormData) {
   const id = Number(formData.get('id'))
   if (!id) {
-    return { success: false, message: 'Article ID is missing.' }
+    // Tidak melakukan apapun jika id tidak valid
+    return
   }
 
   const supabase = createSupabaseClient()
 
-  // Opsi 1: Hard Delete (hapus permanen)
-  // const { error } = await supabase.from('articles').delete().match({ id });
-
   // Opsi 2: Soft Delete (lebih aman, hanya menandai sebagai terhapus)
-  const { error } = await supabase
-    .from('articles')
-    .update({ delete_at: new Date().toISOString() })
-    .match({ id })
+  await supabase.from('articles').update({ delete_at: new Date().toISOString() }).match({ id })
 
   revalidatePath('/dashboard') // Memuat ulang data di halaman dashboard
-  return { success: !error, message: error ? error.message : 'Article deleted.' }
+  // Tidak perlu return apa-apa (void)
 }
 
 export type ArticleFormState = {
